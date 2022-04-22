@@ -10,8 +10,9 @@
     font-size:25px;
 }
 .welcome-header__text{
-    width:60%;
+    width:70%;
     opacity:0.7;
+    padding: 3px;
 }
 #login-form{
     display: flex;
@@ -27,7 +28,6 @@
 
 #login-form input:not([type="submit"]){
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition:border-color 0.3s ease-in-out;
 }
 #login-form input::placeholder{
     color:rgba(0,0,0,0.4);
@@ -36,12 +36,36 @@
 #login-form input:focus{
     border-color:var(--yellow);
 }
+@keyframes loginformHover{
+    33%{
+        background-color: #f1f3f5;
+    }
+    66%{
+        background-color: #f1f3f5;
+    }
+    100%{
+        background-color: #f1f3f5;
+    }
+}
 #login-form input[type="submit"]{
-    background-color: var(--yellow);
+    background-color: #c2d4da;
     cursor: pointer;
     padding:20px 0px;
     border-radius: 5px;
 }
+#login-form input[type="submit"]:hover{
+    animation: loginformHover 1s ease-in-out forwards;
+}
+
+#login-form input[type="text"]:hover{
+    border:2px solid #d9d9d9;
+    border-radius: 5px;
+}
+#login-form input[type="password"]:hover{
+    border:2px solid  #d9d9d9;
+    border-radius: 5px;
+}
+
 #login-form a{
     text-align: center;
     text-decoration: none;
